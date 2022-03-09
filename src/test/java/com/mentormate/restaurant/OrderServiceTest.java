@@ -1,6 +1,10 @@
 package com.mentormate.restaurant;
 
 import com.mentormate.restaurant.model.dto.orderDTO.OrderDTO;
+import com.mentormate.restaurant.model.dto.orderStatusDTO.OrderStatusDTO;
+import com.mentormate.restaurant.model.dto.tableDTO.TableDTO;
+import com.mentormate.restaurant.model.dto.userDTO.UserResponseDTO;
+import com.mentormate.restaurant.model.pojos.Order;
 import com.mentormate.restaurant.model.pojos.OrderStatus;
 import com.mentormate.restaurant.model.pojos.Table;
 import com.mentormate.restaurant.model.pojos.User;
@@ -13,6 +17,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import java.sql.Date;
+
 @ExtendWith(MockitoExtension.class)
 public class OrderServiceTest {
     @InjectMocks
@@ -22,24 +28,33 @@ public class OrderServiceTest {
     OrderRepository orderRepository;
 
     @Mock
-    OrderConverter userConverter;
+    OrderConverter orderConverter;
 
     @Test
     public void test() {
-        User user = new User();
-        user.setUserId(1);
-        user.setUserName("Waiter");
-        user.setPassword("Waiter");
-        user.setUserEmail("WaiterEmail");
+//        OrderConverter orderConverter = new OrderConverter();
+//        UserResponseDTO user = new UserResponseDTO();
+//        user.setUserId(1);
+//        user.setUserName("Waiter");
+//        user.setUserEmail("WaiterEmail");
+//
+//        TableDTO table = new TableDTO();
+//        table.setTableNumber(1);
+//        table.setTableId(1);
+//        OrderStatusDTO orderStatus = new OrderStatusDTO();
+//        orderStatus.setStatus("active");
+//        orderStatus.setStatusId(1);
+//        java.util.Date date = new java.util.Date();
+//
+//        OrderDTO orderDTO = orderService.createOrder(user,table,orderStatus);
+//        System.out.println(orderDTO);
 
-        Table table = new Table();
-        table.setTableNumber(1);
-        table.setTableId(1);
-        OrderStatus orderStatus = new OrderStatus();
-        orderStatus.setStatus("active");
-        orderStatus.setStatusId(1);
 
-        OrderDTO orderDTO = orderService.createOrder(user, table, orderStatus);
+
+
+
+
+
 
 
     }

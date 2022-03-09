@@ -12,12 +12,12 @@ import java.sql.Date;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @Entity
 @Table(name = "orders")
 public class Order {
     @Id
-    @Column(name = "order_id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "order_id", nullable = false, insertable = true, updatable = true)
     private Integer orderId;
 
     @ManyToOne

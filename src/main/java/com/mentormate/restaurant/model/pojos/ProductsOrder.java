@@ -4,9 +4,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Getter
 @Setter
@@ -14,13 +12,19 @@ import javax.persistence.Id;
 @Entity
 @javax.persistence.Table(name = "products_in_order")
 public class ProductsOrder {
-
     @Id
-    @Column(name = "order_id", nullable = false)
-    private Integer orderId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false, insertable = true, updatable = true)
+    private Integer id;
 
-    @Column(name = "product_id", nullable = false)
-    private int productId;
+
+    @ManyToOne
+    @JoinColumn(name = "order_id")
+    private Order orderId;
+
+    @ManyToOne
+    @JoinColumn(name = "product_id")
+    private Product productId;
 
 
 }

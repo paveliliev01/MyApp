@@ -8,18 +8,16 @@ import org.springframework.stereotype.Component;
 public class OrderConverter {
 
     public OrderDTO toDto(Order entity) {
-        OrderDTO dto = new OrderDTO();
-        dto.setOrderId(entity.getOrderId());
-        dto.setOrderDate(entity.getOrderDate());
-        dto.setOrderStatus(entity.getOrderStatus());
-        dto.setTable(entity.getTable());
-        dto.setWaiter(entity.getWaiter());
-        return dto;
+        OrderDTO orderDTO = new OrderDTO();
+        orderDTO.setOrderStatus(entity.getOrderStatus());
+        orderDTO.setTable(entity.getTable());
+        orderDTO.setOrderDate(entity.getOrderDate());
+        orderDTO.setWaiter(entity.getWaiter());
+        return orderDTO;
     }
 
     public Order toEntity(OrderDTO dto) {
         Order entity = new Order();
-        entity.setOrderId(dto.getOrderId());
         entity.setOrderDate(dto.getOrderDate());
         entity.setOrderStatus(dto.getOrderStatus());
         entity.setTable(dto.getTable());

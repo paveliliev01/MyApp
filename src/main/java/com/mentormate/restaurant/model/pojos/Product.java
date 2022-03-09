@@ -6,6 +6,7 @@ import lombok.Setter;
 
 import javax.persistence.Table;
 import javax.persistence.*;
+import java.math.BigDecimal;
 
 
 @Getter
@@ -30,7 +31,7 @@ public class Product {
     private String description;
 
     @Column(name = "product_price", nullable = false)
-    private Double productPrice;
+    private BigDecimal productPrice;
 
     @Column(name = "soft_delete", nullable = false)
     private Integer softDelete;
