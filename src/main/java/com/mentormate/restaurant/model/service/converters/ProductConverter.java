@@ -14,6 +14,7 @@ public class ProductConverter {
         dto.setProductPrice(entity.getProductPrice());
         dto.setDescription(entity.getDescription());
         dto.setProductName(entity.getProductName());
+        dto.setSoftDelete(entity.getSoftDelete());
         return dto;
     }
 
@@ -24,6 +25,7 @@ public class ProductConverter {
         entity.setProductPrice(dto.getProductPrice());
         entity.setDescription(dto.getDescription());
         entity.setProductName(dto.getProductName());
+        entity.setSoftDelete(dto.getSoftDelete());
 
 
         return entity;

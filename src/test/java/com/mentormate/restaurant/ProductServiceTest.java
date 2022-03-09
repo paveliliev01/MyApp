@@ -34,16 +34,16 @@ public class ProductServiceTest {
 
     @Test
     public void test(){
-        ModelMapper modelMapper = new ModelMapper();
-        Product productDTO = new Product();
-        productDTO.setProductPrice(11.1);
-        productDTO.setProductId(1);
-        productDTO.setProductCategory("Meat");
-        productDTO.setProductName("Meat");
-        productDTO.setDescription("Test");
-        ProductDTO productDTO1 = new ProductDTO();
-        modelMapper.map(productDTO,productDTO1);
-        System.out.println(productDTO1.getProductName());
+//        ModelMapper modelMapper = new ModelMapper();
+//        Product productDTO = new Product();
+//        productDTO.setProductPrice(11.1);
+//        productDTO.setProductId(1);
+//        productDTO.setProductCategory("Meat");
+//        productDTO.setProductName("Meat");
+//        productDTO.setDescription("Test");
+//        ProductDTO productDTO1 = new ProductDTO();
+//        modelMapper.map(productDTO,productDTO1);
+//        System.out.println(productDTO1.getProductName());
 
 
 
